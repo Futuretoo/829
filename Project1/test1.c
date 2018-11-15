@@ -4,7 +4,7 @@
 /*
 用指针交换一个数组的顺序 
  */
-int main() {
+int main1() {
 	void rev1(int *p,int n);
 	void rev2(int *p,int n);
 	void printArray(int *p,int n);
