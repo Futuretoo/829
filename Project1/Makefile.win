@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = main.o
-LINKOBJ  = main.o
+OBJ      = test1.o test2.o
+LINKOBJ  = test1.o test2.o
 LIBS     = -L"C:/Tools/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -m32
 INCS     = -I"C:/Tools/Dev-Cpp/MinGW64/include" -I"C:/Tools/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Tools/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Tools/Dev-Cpp/MinGW64/include" -I"C:/Tools/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Tools/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Tools/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -24,5 +24,8 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-main.o: main.c
-	$(CC) -c main.c -o main.o $(CFLAGS)
+test1.o: test1.c
+	$(CC) -c test1.c -o test1.o $(CFLAGS)
+
+test2.o: test2.c
+	$(CC) -c test2.c -o test2.o $(CFLAGS)
