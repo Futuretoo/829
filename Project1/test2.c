@@ -7,7 +7,7 @@ int row=3;//行号，代表几个学生
 int col=4;//列号，代表几门成绩
 float grade[3][4]= {{76.3,67.5,55.6,96.9}, {70.5,84.6,67.8,66.5}, {66.6,67.9,89.5,60.9}};
 
-void main() {
+void main2() {
 	void printOne1(float *a);
 	void printOne2(float a[][4],int n);
 	void printOne3(float (*a)[4],int n);
@@ -29,6 +29,8 @@ void main() {
 //	//
 //	printf("method3\n");
 //	printOne3(grade,1);
+
+
 	search1();
 	average();
 }
@@ -103,6 +105,13 @@ void average(){
 	printf("course_2 average: %.2f\n",a2/3);
 	printf("course_3 average: %.2f\n",a3/3);
 } 
+
+
+
+
+
+
+
 
 
 
