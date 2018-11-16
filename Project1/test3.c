@@ -3,7 +3,7 @@
 指针指向字符串
 以及指针数组
 */
-void main() {
+void main3() {
 	void change1(char *s);
 	void sort(char *s[],int n);
 	void print(char *s[],int n);
