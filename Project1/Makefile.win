@@ -1,30 +1,28 @@
 # Project: Project1
-# Makefile created by Dev-C++ 4.9.9.2
+# Makefile created by Dev-C++ 5.11
 
-CPP  = g++.exe
-CC   = gcc.exe
-WINDRES = windres.exe
-RES  = 
-OBJ  = test1.o test2.o test3.o test4.o $(RES)
-LINKOBJ  = test1.o test2.o test3.o test4.o $(RES)
-LIBS =  -L"C:/Tools/DevCpp/lib"  -fmessage-length=0 
-INCS =  -I"C:/Tools/DevCpp/include" 
-CXXINCS =  -I"C:/Tools/DevCpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Tools/DevCpp/include/c++/3.4.2/backward"  -I"C:/Tools/DevCpp/include/c++/3.4.2/mingw32"  -I"C:/Tools/DevCpp/include/c++/3.4.2"  -I"C:/Tools/DevCpp/include" 
-BIN  = Project1.exe
-CXXFLAGS = $(CXXINCS)   -fshort-double -fmessage-length=0
-CFLAGS = $(INCS)   -fshort-double -fmessage-length=0
-RM = rm -f
+CPP      = g++.exe
+CC       = gcc.exe
+WINDRES  = windres.exe
+OBJ      = test1.o test2.o test3.o test4.o
+LINKOBJ  = test1.o test2.o test3.o test4.o
+LIBS     = -L"C:/Tools/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -m32
+INCS     = -I"C:/Tools/Dev-Cpp/MinGW64/include" -I"C:/Tools/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Tools/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
+CXXINCS  = -I"C:/Tools/Dev-Cpp/MinGW64/include" -I"C:/Tools/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Tools/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Tools/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
+BIN      = Project1.exe
+CXXFLAGS = $(CXXINCS) -m32
+CFLAGS   = $(INCS) -m32
+RM       = rm.exe -f
 
 .PHONY: all all-before all-after clean clean-custom
 
-all: all-before Project1.exe all-after
-
+all: all-before $(BIN) all-after
 
 clean: clean-custom
 	${RM} $(OBJ) $(BIN)
 
 $(BIN): $(OBJ)
-	$(CC) $(LINKOBJ) -o "Project1.exe" $(LIBS)
+	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
 
 test1.o: test1.c
 	$(CC) -c test1.c -o test1.o $(CFLAGS)
