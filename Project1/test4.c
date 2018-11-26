@@ -24,7 +24,7 @@ struct Student {
 	char name[20];//这里要注意，是数组
 	char *job;//考试成绩
 };
-void main() {
+void main4() {
 	void printInfo(struct Person s);
 
 	struct Person a = {1,1,"male",18,"Jack",'s',95.5};//98.5默认复制给第一个属性值

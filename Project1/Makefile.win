@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = test1.o test2.o test3.o test4.o
-LINKOBJ  = test1.o test2.o test3.o test4.o
+OBJ      = test1.o test2.o test3.o test4.o test5.o
+LINKOBJ  = test1.o test2.o test3.o test4.o test5.o
 LIBS     = -L"C:/Tools/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -m32
 INCS     = -I"C:/Tools/Dev-Cpp/MinGW64/include" -I"C:/Tools/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Tools/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Tools/Dev-Cpp/MinGW64/include" -I"C:/Tools/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Tools/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Tools/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -35,3 +35,6 @@ test3.o: test3.c
 
 test4.o: test4.c
 	$(CC) -c test4.c -o test4.o $(CFLAGS)
+
+test5.o: test5.c
+	$(CC) -c test5.c -o test5.o $(CFLAGS)
