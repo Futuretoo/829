@@ -4,7 +4,7 @@
 /*
 用指针交换一个数组的顺序 
  */
-int main1() {
+int main() {
 	void rev1(int *p,int n);
 	void rev2(int *p,int n);
 	void printArray(int *p,int n);
@@ -13,6 +13,11 @@ int main1() {
 	rev2(nums,10);
 
 	printArray(nums,10);
+	
+	int a;//a的值不确定，不一定是0 
+	int *p=&a;//这里*p可以直接指向a的地址，因为a已经分配空间 
+	printf("a=%d\n",a);
+	printf("a=%d\n",*p);
 }
 
 //使用计数器i

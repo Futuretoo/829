@@ -2,7 +2,7 @@
 /*
 �ݹ鷨 
 */
-void main() {
+void main5() {
 	int AppleNum(int day);
 	int hano(int num);
 	
