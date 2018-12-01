@@ -3,7 +3,7 @@
 /*
 字符串
 */
-void main() {
+void main6() {
 	char *s="you are beautiful,\0 it is true";
 	printf("%s\n",s);//you are beautiful,截取到\0
 	//sizeof是关键字
