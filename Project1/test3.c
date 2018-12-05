@@ -3,7 +3,25 @@
 指针指向字符串
 以及指针数组
 */
-void main3() {
+void main() {
+	void test32();
+	
+	test32();
+}
+
+//指向指针的指针 
+void test32(){
+	char *s2="I love China!",**s1=&s2;
+	char *s3,c,*s4="w";
+	s3=&c;
+	*s3='H';
+	s2=s2+2;
+	printf("%s\t %c\t %s\t %c\t",s2,*s3,s4,**s1);
+	//love china!	H	w	l
+	//**s1是l，因为s1是指向指针s2的地址，s2指向的地址+2，则**s1指向的字符串也+2 
+}
+
+void test31() {
 	void change1(char *s);
 	void sort(char *s[],int n);
 	void print(char *s[],int n);
@@ -34,10 +52,10 @@ void sort(char *s[],int n) {
 	int i,j,k;
 	for(i=0; i<n-1; i++) {
 		k=i;
-		//选择法排序 
+		//选择法排序
 		for(j=i+1; j<n; j++) {
 			if(strcmp(s[k],s[j])>0)
-				k=j;//选出最小的 
+				k=j;//选出最小的
 		}
 		if(k!=i) {
 			temp=s[i];
