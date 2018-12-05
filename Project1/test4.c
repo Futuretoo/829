@@ -109,6 +109,7 @@ void qus2() {
 	union charA a= {.chara="abc"};
 //	a.chara = {'a','b','c'};//这样赋值会报错
 //	a.chara = "abc";//这样赋值也会报错
+//因为数组的赋值，只能在声明时全部赋值；其后只能逐个赋值 
 	printf("high:%c\n",a.s.high);//c
 	printf("mid:%c\n",a.s.mid);//b
 	printf("low:%c\n",a.s.low);//a
